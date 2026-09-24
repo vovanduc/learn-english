@@ -11,9 +11,9 @@ Generate detailed lesson content incrementally. The repository contains the full
 
 - 🟩 A1-01 — A good night's sleep
 - 🟩 A1-02 — At the library – giving personal information
-- 🟨 A1-03 — Band auditions
-- 🟨 A1-04 — Describing people
-- 🟨 A1-05 — First day at school
+- 🟩 A1-03 — Band auditions
+- 🟩 A1-04 — Describing people
+- 🟩 A1-05 — First day at school
 - 🟨 A1-06 — Getting an ID card
 - 🟨 A1-07 — Interview with a swimmer
 - 🟨 A1-08 — Introducing a friend
