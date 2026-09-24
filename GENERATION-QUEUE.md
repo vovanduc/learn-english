@@ -1,6 +1,6 @@
 # Generation Queue
 
-Generate detailed lesson content incrementally. The repository contains the full source PDFs and the lesson architecture. Only A1-01 is fully packaged now; the remaining lessons are generated when requested.
+Generate detailed lesson content incrementally. The repository contains the full source curriculum and the lesson architecture.
 
 ## Status legend
 - 🟩 Complete package
@@ -8,7 +8,7 @@ Generate detailed lesson content incrementally. The repository contains the full
 - ⬜ Not started
 
 - 🟩 A1-01 — A good night's sleep
-- 🟨 A1-02 — At the library – giving personal information
+- 🟩 A1-02 — At the library – giving personal information
 - 🟨 A1-03 — Band auditions
 - 🟨 A1-04 — Describing people
 - 🟨 A1-05 — First day at school
