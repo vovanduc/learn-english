@@ -1,0 +1,40 @@
+name: Materialize source PDFs
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "source/british-council/_encoded/**"
+
+permissions:
+  contents: write
+
+jobs:
+  materialize:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Rebuild PDF files from repository chunks
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p source/british-council
+          for prefix in workbook-student workbook-with-answers; do
+            cat source/british-council/_encoded/${prefix}.part-* | base64 -d > "source/british-council/${prefix}.pdf"
+          done
+
+      - name: Commit materialized PDFs
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add source/british-council/workbook-student.pdf source/british-council/workbook-with-answers.pdf
+          if git diff --cached --quiet; then
+            echo "No PDF changes."
+            exit 0
+          fi
+          git commit -m "chore: materialize source PDFs"
+          git push
