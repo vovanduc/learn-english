@@ -2,6 +2,8 @@
 
 Generate detailed lesson content incrementally. The repository contains the full source curriculum and the lesson architecture.
 
+**Important:** status in this file tracks **lesson-package generation**, not learner completion. A green package can still be unstudied.
+
 ## Status legend
 - 🟩 Complete package
 - 🟨 Ready to generate from source
